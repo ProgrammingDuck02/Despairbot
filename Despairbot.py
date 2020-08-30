@@ -2134,8 +2134,6 @@ async def on_message(message):
             msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
-        files=[]
-        files2=[]
         for each in glob(PATH+"rooms - plain/*.txt"):
             temps=os.path.abspath(each)
             plik=open(temps,"r",encoding="utf-8")
@@ -2174,6 +2172,23 @@ async def on_message(message):
         msg="Nie znalazlem ucznia o którym mówisz"
         await message.channel.send(msg)
     
+    if mes.lower().startswith("logout"):
+        try:
+            kto=usertomember(message.author)
+        except NameError:
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
+            await message.channel.send(msg)
+            return
+        test=jestrola(kto,SuperiorRole)
+        if not test:
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
+            await message.channel.send(msg)
+            return
+        room=client.get_channel(735472342398009404)
+        msg="Bot został wyłączony"
+        await room.send(msg)
+        await client.logout()
+
 @client.event
 async def on_ready():
     global STUDENTS

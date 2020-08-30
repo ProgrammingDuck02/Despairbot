@@ -1,0 +1,1 @@
+d!gamestart - Zaczyna oficjalnie grę. Komenda dostępna jedynie dla mistrza gry.

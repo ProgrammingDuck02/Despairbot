@@ -1,0 +1,1 @@
+d!informacje (osoba) - powiem ci co podana osoba podała w rubryce "dodatkowe informacje". Jeśli osoba nie zostanie podana, to po prostu powiem ci co ty tam napisałeś. Komenda dostępna dla wszystkich.

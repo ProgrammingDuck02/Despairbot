@@ -1,0 +1,1 @@
+d!legitymacja (osoba) - update'uje legitymację w kanale. Nie używać za często - duży lag. Komenda dostępna tylko dla Aniołów.

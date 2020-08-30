@@ -1,0 +1,1 @@
+d!rp (kanał) (wiadomość) - wysyła wiadomość na podany kanał. Komenda dostępna tylko dla mistrza gry.

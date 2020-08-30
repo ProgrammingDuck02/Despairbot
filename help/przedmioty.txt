@@ -1,0 +1,1 @@
+d!przedmioty (osoba) - powiem ci listę przedmiotów podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twoje przedmioty. Komenda dostępna dla wszystkich.

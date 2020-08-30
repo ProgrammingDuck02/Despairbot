@@ -1,0 +1,1 @@
+d!editroom (pokój) (tekst) - Zmienia opis pokoju na podany tekst. 

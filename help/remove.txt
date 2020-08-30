@@ -1,0 +1,1 @@
+d!remove (osoba) (przedmiot) - usuwa podany przedmiot z listy jawnej lub ukrytej przedmiotów podanej osoby. Komenda dostępna tylko dla Aniołów.

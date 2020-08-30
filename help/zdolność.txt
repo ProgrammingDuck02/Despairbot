@@ -1,0 +1,1 @@
+d!zdolność (osoba) - powiem ci jaką zdolność ma podana osoba. Jeśli osoba nie zostanie podana, to po prostu powiem ci twoją zdolność. Komenda dostępna tylko dla Aniołów, ale możesz jej użyć żeby się dowiedzieć swojej zdolności.

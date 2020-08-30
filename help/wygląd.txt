@@ -1,0 +1,1 @@
+d!wygląd (osoba) - powiem ci opis wyglądu podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twój opis wyglądu. Komenda dostępna dla wszystkich.

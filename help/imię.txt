@@ -1,0 +1,1 @@
+d!imię (osoba) - powiem ci imię podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twoje imię. Komenda dostępna dla wszystkich.

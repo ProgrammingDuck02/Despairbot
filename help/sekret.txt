@@ -1,0 +1,1 @@
+d!zdolność (osoba) - powiem ci jaki sekret ma podana osoba. Jeśli osoba nie zostanie podana, to po prostu powiem ci twój sekret. Komenda dostępna tylko dla Aniołów, ale możesz jej użyć żeby się dowiedzieć swój sekret.

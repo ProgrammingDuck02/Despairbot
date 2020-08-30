@@ -1,0 +1,1 @@
+d!showembed (osoba) - pokazuje embed będący identyfikatorem podanej osoby. Jeśli osoba nie zostana, pokazanie zostany twój identyfikator. Komenda dostępna dla wszystkich.

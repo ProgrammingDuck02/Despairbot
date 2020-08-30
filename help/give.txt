@@ -1,0 +1,1 @@
+d!give (osoba) (przedmiot) - Dodaje osobie przedmiot do jej listy jawnych przedmiotów. Komenda dostępna tylko dla Aniołów.

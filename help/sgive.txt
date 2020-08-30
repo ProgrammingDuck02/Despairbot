@@ -1,0 +1,1 @@
+d!sgive (osoba) (przedmiot) - Dodaje osobie przedmiot do jej listy ukrytych przedmiotów. Komenda dostępna tylko dla Aniołów.

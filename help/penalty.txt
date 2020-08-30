@@ -1,0 +1,1 @@
+d!penalty (ilość minusów) - daje każdemu uczniowi podaną ilość minusów. Komenda dostępna tylko dla Aniołów.

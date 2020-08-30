@@ -1,0 +1,1 @@
+d!gamestop - Oficjalnie kończy grę. Komenda dostępna jedynie dla mistrza gry.

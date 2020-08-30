@@ -1,0 +1,5 @@
+dla nie-Aniołów:
+d!hide (przedmiot) - Przenosi twój przedmiot z jawnej listy na ukrytą listę.
+dla Aniołów:
+d!hide (osoba) (przedmiot) - Przenosi przedmiot podanej osoby z jawnej listy na ukrytą listę.
+Komenda dostępna dla wszystkich

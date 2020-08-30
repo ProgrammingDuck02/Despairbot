@@ -1,0 +1,1 @@
+d!reap - Sprawdza czy któryś z uczniów ma -5 punktów lub mniej. Komenda dostępna tylko dla Aniołów.

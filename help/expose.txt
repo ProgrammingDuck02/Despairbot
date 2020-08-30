@@ -1,0 +1,5 @@
+dla nie-Aniołów:
+d!expose (przedmiot) - Przenosi twój przedmiot z ukrytej listy na jawną listę.
+dla Aniołów:
+d!expose (osoba) (przedmiot) - Przenosi przedmiot podanej osoby z ukrytej listy na jawną listę.
+Komenda dostępna dla wszystkich

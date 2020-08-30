@@ -1,0 +1,1 @@
+d!płeć (osoba) - powiem ci płeć podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twoją płeć. Komenda dostępna dla wszystkich.

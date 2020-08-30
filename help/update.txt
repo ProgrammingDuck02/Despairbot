@@ -1,0 +1,1 @@
+d!update (osoba) - wymusza update identyfikatora podanej osoby na specjalnym kanale. Jeśli jako osoba będzie podane "all" to nastąpi update każdego. Komenda dostępna tylko dla Aniołów.

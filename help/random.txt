@@ -1,0 +1,1 @@
+d!random (początek) (koniec) - Losuje liczbę z podanego zakresu. Komenda dostępna dla wszystkich.

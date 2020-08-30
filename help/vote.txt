@@ -1,0 +1,1 @@
+d!vote (osoba) - Oddaje głos na podaną osobę lub zmienia go na nią. Komenda dostępna tylko dla żywych i tylko podczas włączonego głosowanie

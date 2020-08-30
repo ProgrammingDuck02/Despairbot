@@ -1,0 +1,1 @@
+d!hasło (piętro) - Sposób na zgadywanie hasła do sekretnego pokoju na podanym piętrze. Komenda dostępna dla wszystkich.

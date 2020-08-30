@@ -1,0 +1,1 @@
+d!opis (miejsce) - Podam ci opis danego miejsca. Komenda niezbędna podczas śledztwa, więc jest dostępna dla wszystkich

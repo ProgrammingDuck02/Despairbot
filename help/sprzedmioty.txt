@@ -1,0 +1,1 @@
+d!sprzedmioty (osoba) - powiem ci listę sekretnych przedmiotów podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twoje sekretne przedmioty. Komenda dostępna tylko dla Aniołów, ale możesz jej użyć żeby się dowiedzieć jakie ty masz sekretne przedmioty.

@@ -1,0 +1,1 @@
+d!sekcja - przeprowadza sekcję na zmarłej osobie. Karą jest jeden minus. Dostajesz w zamian informacje o ciele zmarłej osoby i poznajesz jej sekret. Komenda dostępna tylko dla żywych.

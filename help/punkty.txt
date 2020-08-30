@@ -1,0 +1,1 @@
+d!punkty (osoba) - powiem ci ile punktów ma podana osoba. Jeśli osoba nie zostanie podana, to po prostu powiem ci ile ty masz punktów. Komenda dostępna dla wszystkich.

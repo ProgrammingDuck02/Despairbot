@@ -1,0 +1,1 @@
+d!reset - resetuje punkty wszystkim do 0. Komenda dostępna tylko dla Aniołów

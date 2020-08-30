@@ -1,0 +1,1 @@
+d!botreset - Odpala bota jeszcze raz. Komenda dostępna tylko dla Aniołów.

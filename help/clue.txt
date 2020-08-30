@@ -1,0 +1,1 @@
+d!clue (poszlaka) - dodaje poszlakę do odpowiedniego kanału. Komenda dostępna tylko dla detektywów.

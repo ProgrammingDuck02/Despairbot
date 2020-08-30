@@ -1,0 +1,1 @@
+d!set (tryb) (osoba) (tekst) - Ustala osobie rzeczy na tekst zależnie od trybu. Dostępne tryby: zdolność, sekret, imię, nazwisko, wygląd, wiek, dopełniacz, płeć, informacje oraz odwróć. To ostatnie to informacja o tym czy należy się zwracać do podanej osoby po nazwisku zamiast imienia. Komenda dostępna tylko dla Aniołów.

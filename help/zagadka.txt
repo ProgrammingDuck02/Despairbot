@@ -1,0 +1,1 @@
+d!zagadka (piętro) - pokazuje zagadkę do sekretnego pokoju na podanym piętrze o ile jest odblokowany. Komenda dostępna dla wszystkich.

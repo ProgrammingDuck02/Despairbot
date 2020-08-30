@@ -1,0 +1,5 @@
+d!votes (tryb) - W zależności od trybu:
+~on - włącza głosowanie
+~off - wyłącza głosowanie
+~results - wyłącza głosowanie i pokazuje wyniki
+Komenda dostępna tylko dla aniołów.

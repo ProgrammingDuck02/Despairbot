@@ -1,0 +1,1 @@
+d!wiek (osoba) - powiem ci wiek podanej osoby. Jeśli osoba nie zostanie podana, to po prostu powiem ci twój wiek. Komenda dostępna dla wszystkich.

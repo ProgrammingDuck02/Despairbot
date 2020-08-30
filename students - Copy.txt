@@ -1,0 +1,38 @@
+id=370602661776588802
+name=Ren
+surn=Kamio
+gender=Lis
+age=471
+appe=Rudy kitsune z heterochromią i ładną twarzą.
+items=zakrwawiony miecz, notatnik, mp3, słuchawki, zwoje, hoshi no tama
+s_items=dildo, niechęć do życia
+punkty=0
+ability=Super wkurzający
+secret=Planuje zabić Monokumę i zostać dyrektorem
+dop=Rena
+vote=None
+image=https://cdn.discordapp.com/attachments/585481853977493524/585485789530685443/RenDespair.png
+identyfikator=0
+message=689826206585061431
+invert=False
+additional=
+
+id=330392410964361217
+name=Minamimoto
+surn=Sho
+gender=Kalkulator
+age=18
+appe=Zetta good
+items=kalkulator, niespełnione aspiracje o byciu gotyckim graficiarzem w jednej specyficznej dzielnicy Tokyo, megafon
+s_items=
+punkty=-4
+ability=
+secret=
+dop=Sho
+image=https://cdn.discordapp.com/attachments/465950054176522244/735891598679998554/unknown.png
+ovote=None
+identyfikator=735683413624881282
+message=735290088442953779
+invert=True
+additional=Jest fanatykiem królowej nauk. e^(i*pi)+1=0 
+

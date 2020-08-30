@@ -1,0 +1,1 @@
+d!randlist (słowo1) (słowo2) (słowo3) ... - losuje jedno słowo z podanych. Komenda dostępna dla wszystkich.

@@ -1,0 +1,1 @@
+d!murdered (osoba) - Oznacza osobę jako zamordowaną. Należy użyć tej komendy od razu po ogłoszeniu morderstwa. Po skończeniu case'a trzeba użyć "d!murdered clear" żeby wyczyścić. Komenda dostępna tylko dla Aniołów.

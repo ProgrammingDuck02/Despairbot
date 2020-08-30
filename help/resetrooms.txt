@@ -1,0 +1,1 @@
+d!resetrooms - przywraca wszystkie pokoje do orginału. Komenda dostępna tylko dla Aniołów.

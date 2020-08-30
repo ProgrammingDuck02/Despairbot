@@ -1,0 +1,1 @@
+d!ver - podaje versję Despairbota i co nowego. Komenda dostępna dla wszystkich

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <direct.h>
+#include <conio.h>
 #define GetCurrentDir _getcwd
 using namespace std;
 std::string get_current_dir() {
@@ -14,5 +15,6 @@ int main()
 	string path="cd "+get_current_dir();
 	system(path.c_str());
 	system("python despairbot.py");
+	getch();
 	return 0;
 }

@@ -871,7 +871,6 @@ async def on_message(message):
     if mes.lower().startswith("help"):
         if wordsnumber(mes)==1:
             plik=open(PATH+"help-s.txt","r",encoding="utf-8")
-            help=plik.read()
             plik.close()
             mes="Oto lista komend Despairbota. Aby uzyskać szczegółowe informacje użyj komendy (d!help (komenda):"
             skip1=len(PATH+"help/")

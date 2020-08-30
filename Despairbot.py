@@ -11,10 +11,10 @@ THIEVES=None
 CYCLE=None
 GAME=False
 KILLER=None
+TOKEN=None
 #Dane globalne
 PATH="C:/Users/blaze/Desktop/Despairbot/"
 PATHFONT=r"C:\\Users\\blaze\\Desktop\\Despairbot\\Audiowide-Regular.ttf"
-TOKEN="NDY1NTkyMDUwMzkwMTM4OTIw.Xq0HKQ.AviYJ94rHnktmHlV1MsAwBC-LeY"
 client=discord.Client()
 Despairid=334435715058499584
 RESET=False
@@ -2326,6 +2326,10 @@ async def on_ready():
         RESET=False
         msg="Despairbot zresetowany pomyślnie"
         await RESETCHANNEL.send(msg)
+
+plik=open(PATH+"TOKEN.txt","r",encoding="utf-8")
+TOKEN=plik.read()
+plik.close()
 
 client.run(TOKEN)
 while RESET:

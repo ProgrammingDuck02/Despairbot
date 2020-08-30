@@ -13,8 +13,8 @@ GAME=False
 KILLER=None
 TOKEN=None
 #Dane globalne
-PATH="C:/Users/blaze/Desktop/Despairbot/"
-PATHFONT=r"C:\\Users\\blaze\\Desktop\\Despairbot\\Audiowide-Regular.ttf"
+PATH=""
+PATHFONT=""
 client=discord.Client()
 Despairid=334435715058499584
 RESET=False
@@ -228,16 +228,16 @@ def saveid(ktos):
     else:
         text=ktos.name+"\n"+ktos.surn
     draw=ImageDraw.Draw(identyfikator)
-    font=ImageFont.truetype(PATHFONT,size=80,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=80,encoding="UTF-8")
     draw.multiline_text(xy=(650,114),text=text,font=font,spacing=15)
     text="Wiek: "+str(ktos.age)
-    font=ImageFont.truetype(PATHFONT,size=50,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=50,encoding="UTF-8")
     draw.text(xy=(650,325),text=text,font=font)
     text="Punkty: "+str(ktos.punkty)
-    font=ImageFont.truetype(PATHFONT,size=60,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=60,encoding="UTF-8")
     draw.text(xy=(650,518),text=text,font=font)
     text=wrappedtext(ktos.additional,35,1005)
-    font=ImageFont.truetype(PATHFONT,size=35,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=35,encoding="UTF-8")
     draw.multiline_text(xy=(113,742),text=text,font=font)
     count=0
     items=stringtolist(ktos.items,False)

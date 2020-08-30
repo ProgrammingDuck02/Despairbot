@@ -1860,6 +1860,8 @@ async def on_message(message):
             perc=15
         if message.author.id==294476268416532480:
             perc=perc+10
+        if message.author.id==663807472732995638:
+            perc=perc+15
         mes=simplify(mes)
         item=mes[(len("steal  ")+len(word(mes,2))):].lower()
         items=stringtolist(STUDENTS[ind2].items,True)

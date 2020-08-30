@@ -13,8 +13,8 @@ GAME=False
 KILLER=None
 TOKEN=None
 #Dane globalne
-PATH="C:/Users/blaze/Desktop/Despairbot/"
-PATHFONT=r"C:\\Users\\blaze\\Desktop\\Despairbot\\Audiowide-Regular.ttf"
+PATH=""
+PATHFONT=""
 client=discord.Client()
 Despairid=334435715058499584
 RESET=False
@@ -228,16 +228,16 @@ def saveid(ktos):
     else:
         text=ktos.name+"\n"+ktos.surn
     draw=ImageDraw.Draw(identyfikator)
-    font=ImageFont.truetype(PATHFONT,size=80,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=80,encoding="UTF-8")
     draw.multiline_text(xy=(650,114),text=text,font=font,spacing=15)
     text="Wiek: "+str(ktos.age)
-    font=ImageFont.truetype(PATHFONT,size=50,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=50,encoding="UTF-8")
     draw.text(xy=(650,325),text=text,font=font)
     text="Punkty: "+str(ktos.punkty)
-    font=ImageFont.truetype(PATHFONT,size=60,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=60,encoding="UTF-8")
     draw.text(xy=(650,518),text=text,font=font)
     text=wrappedtext(ktos.additional,35,1005)
-    font=ImageFont.truetype(PATHFONT,size=35,encoding="UTF-8")
+    font=ImageFont.truetype(PATHFONT+"Audiowide-Regular.ttf",size=35,encoding="UTF-8")
     draw.multiline_text(xy=(113,742),text=text,font=font)
     count=0
     items=stringtolist(ktos.items,False)
@@ -568,7 +568,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -588,7 +588,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -608,7 +608,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -624,7 +624,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -640,7 +640,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -656,7 +656,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -672,7 +672,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         else:
@@ -692,7 +692,7 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)==1:
@@ -703,14 +703,14 @@ async def on_message(message):
             if kto==usertomember(message.author).display_name:
                 test=True
             else:
-                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię".format(message)
+                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię"
                 await message.channel.send(msg)
                 return
         if test:
             try:
                 ktos=getstudent(kto)
             except NameError:
-                msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+                msg="Nie znaleziono podanej nazwy w bazie danych"
                 await message.channel.send(msg)
                 return
             if ktos.s_items=="":
@@ -733,7 +733,7 @@ async def on_message(message):
         try:
             ktos=getstudent(kto)
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
         else:
             msg=(ktos.name+" ma "+str(ktos.punkty)+" punktów").format(message)
@@ -744,7 +744,7 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)==1:
@@ -755,14 +755,14 @@ async def on_message(message):
             if kto==usertomember(message.author).display_name:
                 test=True
             else:
-                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię".format(message)
+                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię"
                 await message.channel.send(msg)
                 return
         if test:
             try:
                 ktos=getstudent(kto)
             except NameError:
-                msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+                msg="Nie znaleziono podanej nazwy w bazie danych"
                 await message.channel.send(msg)
             else:
                 msg=("Zdolność "+ktos.dop+" to: "+ktos.ability).format(message)
@@ -773,7 +773,7 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)==1:
@@ -784,14 +784,14 @@ async def on_message(message):
             if kto==usertomember(message.author).display_name:
                 test=True
             else:
-                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię".format(message)
+                msg="Jeśli chcesz wiedzieć rzeczy, których nie powinieneś, to polecam czarną biblię"
                 await message.channel.send(msg)
                 return
         if test:
             try:
                 ktos=getstudent(kto)
             except NameError:
-                msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+                msg="Nie znaleziono podanej nazwy w bazie danych"
                 await message.channel.send(msg)
             else:
                 msg=("Sekret "+ktos.dop+" to: "+ktos.secret).format(message)
@@ -802,24 +802,24 @@ async def on_message(message):
         try:
             ind=getstudentindex(word(mes,2))
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         test=None
         try:
             test=not jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if test:
-            msg="Brak uprawnień!".format(message)
+            msg="Brak uprawnień!"
             await message.channel.send(msg)
         else:
             try:
                 STUDENTS[ind].punkty=STUDENTS[ind].punkty+1
             except IndexError:
-                msg="Ups,coś poszło nie tak".format(message)
+                msg="Ups,coś poszło nie tak"
                 await message.channel.send(msg)
                 return
             else:
@@ -834,24 +834,24 @@ async def on_message(message):
         try:
             ind=getstudentindex(word(mes,2))
         except NameError:
-            msg="Nie znaleziono podanej nazwy w bazie danych".format(message)
+            msg="Nie znaleziono podanej nazwy w bazie danych"
             await message.channel.send(msg)
             return
         test=None
         try:
             test=not jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if test:
-            msg="Brak uprawnień!".format(message)
+            msg="Brak uprawnień!"
             await message.channel.send(msg)
         else:
             try:
                 STUDENTS[ind].punkty=STUDENTS[ind].punkty-1
             except IndexError:
-                msg="Ups,coś poszło nie tak".format(message)
+                msg="Ups,coś poszło nie tak"
                 await message.channel.send(msg)
                 return
             else:
@@ -862,9 +862,9 @@ async def on_message(message):
                 await message.channel.send(msg)
                 
     if mes.lower().startswith("ver"):
-        msg="Aktualna wersja Despairbota: 2.1\nCo nowego:\n-Identyfikatory! (sprawdź d!showid)\n-Automatyczne aktualizacje idetyfikatorów na odpowiedim kanale\n-Sprawia, że jesteś breathtaking!*".format(message)
+        msg="Aktualna wersja Despairbota: 2.1\nCo nowego:\n-Identyfikatory! (sprawdź d!showid)\n-Automatyczne aktualizacje idetyfikatorów na odpowiedim kanale\n-Sprawia, że jesteś breathtaking!*"
         await message.channel.send(msg)
-        msg="*Tak naprawdę to nie".format(message)
+        msg="*Tak naprawdę to nie"
         await message.channel.send(msg)
         return
 
@@ -904,7 +904,7 @@ async def on_message(message):
     if mes.lower().startswith("opis"):
         room=mes[5:].lower()
         if not os.path.isfile(PATH+"rooms/"+room+".txt"):
-            msg="Błędna nazwa pokoju".format(message)
+            msg="Błędna nazwa pokoju"
             await message.channel.send(msg)
         else:
             plik=open(PATH+"rooms/"+room+".txt",encoding="utf-8")
@@ -935,22 +935,22 @@ async def on_message(message):
         try:
             test=not jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię w bazie danych serwera...".format(message)
+            msg="Nie znalazłem cię w bazie danych serwera..."
             await message.channel.send(msg)
             return
         if test:
-            msg="Brak uprawnień!\nMożesz zabić kogoś w inny sposób...".format(message)
+            msg="Brak uprawnień!\nMożesz zabić kogoś w inny sposób..."
             await message.channel.send(msg)
             return
         kto=None
         try:
             kto=getmember(word(mes,2))
         except NameError:
-            msg="Bardzo chciałbym zabić tę osobę, ale nie mogę jej znaleźć na serwerze...".format(message)
+            msg="Bardzo chciałbym zabić tę osobę, ale nie mogę jej znaleźć na serwerze..."
             await message.channel.send(msg)
             return
         if not jestrola(kto,"Żywi"):
-            msg="To nie jest dusza, którą jesteśmy zainteresowani".format(message)
+            msg="To nie jest dusza, którą jesteśmy zainteresowani"
             await message.channel.send(msg)
             return
         lista=['*Wyciąga pistolet i celuje w '+kto.mention+'*\nIt\'s showtime!\n*puf*\n**Uczeń '+kto.display_name+' został zabity**']
@@ -985,17 +985,17 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),"Żywi")
         except NameError:
-            msg="Nie znaleziono cię na serwerze".format(message)
+            msg="Nie znaleziono cię na serwerze"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Rozumiem twoją chęć bycia mesjaszem, ale ty raczej już nie zmartwychwstaniesz, by ratować świat".format(message)
+            msg="Rozumiem twoją chęć bycia mesjaszem, ale ty raczej już nie zmartwychwstaniesz, by ratować świat"
             await message.channel.send(msg)
             return
         try:
             kto=getmember(word(mes,2))
         except NameError:
-            msg="Nie znaleziono podanego ucznia na serwerze".format(message)
+            msg="Nie znaleziono podanego ucznia na serwerze"
             await message.channel.send(msg)
             return
         if not jestrola(kto,"Martwi"):
@@ -1003,14 +1003,14 @@ async def on_message(message):
             await message.channel.send(msg)
             return
         if not jestrola(kto,"Uświęcenie"):
-            msg="Jego dusza jest dla nas... conajmniej bezwartościowa".format(message)
+            msg="Jego dusza jest dla nas... conajmniej bezwartościowa"
             await message.channel.send(msg)
             return
         saver=None
         try:
             saver=getstudentindex(usertomember(message.author).display_name)
         except NameError:
-            msg="Nie można znaleźć cię na liście uczniów".format(message)
+            msg="Nie można znaleźć cię na liście uczniów"
             await message.channel.send(msg)
             return
         try:
@@ -1039,11 +1039,11 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Nie znalazłem cię na serwerze mistrza Monokumy".format(message)
+            msg="Nie znalazłem cię na serwerze mistrza Monokumy"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Nie jesteś godny używania tej komendy padawanie!".format(message)
+            msg="Nie jesteś godny używania tej komendy padawanie!"
             await message.channel.send(msg)
             return
         lista=[]
@@ -1052,10 +1052,10 @@ async def on_message(message):
                 lista.append(STUDENTS[i].name+" "+STUDENTS[i].surn)
         korytarz=client.get_channel(585839587885187075)
         if len(lista)==0:
-            msg="Nikt tym razem nie zasłużył na śmierć".format(message)
+            msg="Nikt tym razem nie zasłużył na śmierć"
             await message.channel.send(msg)
             return
-        msg="Niektórzy uczniowie poczuli na sobie spojrzenie Ezekiela".format(message)
+        msg="Niektórzy uczniowie poczuli na sobie spojrzenie Ezekiela"
         await korytarz.send(msg)
         mes="Osoby, które zasłużyły na śmierć:"
         for i in range(len(lista)):
@@ -1071,11 +1071,11 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Jak taki obrzydliwy człowiek, jak ty, śmie sądzić innych za nas...?".format(message)
+            msg="Jak taki obrzydliwy człowiek, jak ty, śmie sądzić innych za nas...?"
             await message.channel.send(msg)
             return
         for i in range(len(STUDENTS)):
@@ -1090,12 +1090,12 @@ async def on_message(message):
                 continue
             STUDENTS[i].punkty=STUDENTS[i].punkty-punishment
         saveall()
-        msg="Wszyscy żywi zostali odpowiednio ukarani...".format(message)
+        msg="Wszyscy żywi zostali odpowiednio ukarani..."
         await message.channel.send(msg)
-        msg="***Tylko "+str(punishment)+"?***".format(message)
+        msg="***Tylko "+str(punishment)+"?***"
         await message.channel.send(msg)
         time.sleep(0.7)
-        msg="Spokojnie, dostaną więcej w swoim czasie...".format(message)
+        msg="Spokojnie, dostaną więcej w swoim czasie..."
         await message.channel.send(msg)
         return
 
@@ -1104,18 +1104,18 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         for i in range(len(STUDENTS)):
             STUDENTS[i].punkty=0
             if GAME: STUDENTS[i].updateid
         saveall()
-        msg="Punkty wszystkich zostały zresetowane do 0".format(message)
+        msg="Punkty wszystkich zostały zresetowane do 0"
         await message.channel.send(msg)
         return
 
@@ -1124,17 +1124,17 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         mode=word(mes,2).lower()
         if mode=="on":
             if VOTES==True:
-                msg="Ale głosowanie już jest włączone!".format(message)
+                msg="Ale głosowanie już jest włączone!"
                 await message.channel.send(msg)
                 return
             else:
@@ -1146,12 +1146,12 @@ async def on_message(message):
                         plik.write(i.replace("votes=0","votes=1"))
                     plik.close()
                 finally:
-                    msg="Włączono Głosowanie!".format(message)
+                    msg="Włączono Głosowanie!"
                     await message.channel.send(msg)
                     return
         elif mode=="off":
             if VOTES==False:
-                msg="Ale głosowanie już jest wyłączone!".format(message)
+                msg="Ale głosowanie już jest wyłączone!"
                 await message.channel.send(msg)
                 return
             else:
@@ -1166,12 +1166,12 @@ async def on_message(message):
                         plik.write(i.replace("votes=1","votes=0"))
                     plik.close()
                 finally:
-                    msg="Wyłączono Głosowanie!".format(message)
+                    msg="Wyłączono Głosowanie!"
                     await message.channel.send(msg)
                     return
         elif mode=="results":
             if VOTES==False:
-                msg="Ale głosowanie aktualnie nawet nie jest włączone!".format(message)
+                msg="Ale głosowanie aktualnie nawet nie jest włączone!"
                 await message.channel.send(msg)
                 return
             else:
@@ -1183,7 +1183,7 @@ async def on_message(message):
                         plik.write(i.replace("votes=1","votes=0"))
                     plik.close()
                 finally:
-                    msg="Wyłączono Głosowanie!".format(message)
+                    msg="Wyłączono Głosowanie!"
                     await message.channel.send(msg)
                 lista=[]
                 for i in range(len(STUDENTS)):
@@ -1216,24 +1216,24 @@ async def on_message(message):
                 await message.channel.send(wiad.format(message))
                 return                       
         else:
-            msg="Nie mogę rozpoznać komendy. Możesz powtórzyć?".format(message)
+            msg="Nie mogę rozpoznać komendy. Możesz powtórzyć?"
             await message.channel.send(msg)
             return
         
     if mes.lower().startswith("vote") and not mes.lower().startswith("votes"):
         if not VOTES:
-            msg="Nie można teraz głosować!".format(message)
+            msg="Nie można teraz głosować!"
             await message.channel.send(msg)
             return
         test=None
         try:
             test=jestrola(usertomember(message.author),"Żywi")
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Tylko żywi mogą głosować!".format(message)
+            msg="Tylko żywi mogą głosować!"
             await message.channel.send(msg)
             return
         kto=word(mes,2).lower()
@@ -1245,14 +1245,14 @@ async def on_message(message):
             await message.channel.send(msg)
             return
         if not test:
-            msg="Można głosować jedynie na tych, którzy jeszcze nie umarli!".format(message)
+            msg="Można głosować jedynie na tych, którzy jeszcze nie umarli!"
             await message.channel.send(msg)
             return
         ind=None
         try:
             ind=getstudentindex(usertomember(message.author).display_name)
         except NameError:
-            msg="Mam problem ze znalezieneim cię na liście uczniów...".format(message)
+            msg="Mam problem ze znalezieneim cię na liście uczniów..."
             await message.channel.send(msg)
             return
         if STUDENTS[ind].vote=="None":
@@ -1271,11 +1271,11 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),"Detektyw")
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Tylko detektywi mogą dodawać poszlaki".format(message)
+            msg="Tylko detektywi mogą dodawać poszlaki"
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<2:
@@ -1314,11 +1314,11 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         if word(mes,2)=="clear":
@@ -1333,7 +1333,7 @@ async def on_message(message):
             plik.close()
             plik=open(PATH+"settings.txt","w",encoding="utf-8")
             plik.write(new)
-            msg="Ciało zostało pomyślnie rzucone na pożarcie psom piekielnym".format(message)
+            msg="Ciało zostało pomyślnie rzucone na pożarcie psom piekielnym"
             await message.channel.send(msg)
             return
         else:
@@ -1341,7 +1341,7 @@ async def on_message(message):
             plik=open(PATH+"settings.txt","a",encoding="utf-8")
             plik.write("\nmurdered="+word(mes,2))
             plik.close()
-            msg="Zaznaczono człowieka o imieniu "+word(mes,2)+" jako martwego".format(message)
+            msg="Zaznaczono człowieka o imieniu "+word(mes,2)+" jako martwego"
             await message.channel.send(msg)
             return
 
@@ -1350,11 +1350,11 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         if word(mes,2)=="clear":
@@ -1369,7 +1369,7 @@ async def on_message(message):
             plik.close()
             plik=open(PATH+"settings.txt","w",encoding="utf-8")
             plik.write(new)
-            msg="Usunięto oznaczenie zabójcy".format(message)
+            msg="Usunięto oznaczenie zabójcy"
             await message.channel.send(msg)
             return
         else:
@@ -1377,13 +1377,13 @@ async def on_message(message):
             plik=open(PATH+"settings.txt","a",encoding="utf-8")
             plik.write("\nkiller="+word(mes,2))
             plik.close()
-            msg="Zaznaczono człowieka o imieniu "+word(mes,2)+" jako zabójcę".format(message)
+            msg="Zaznaczono człowieka o imieniu "+word(mes,2)+" jako zabójcę"
             await message.channel.send(msg)
             return        
 
     if mes.lower().startswith("sekcja"):
         if not VOTES:
-            msg="Spokojnie, na razie nikt nie umarł... Możesz to zmienić :wink:".format(message)
+            msg="Spokojnie, na razie nikt nie umarł... Możesz to zmienić :wink:"
             await message.channel.send(msg)
             return
         kto=getstudent(MURDERED)
@@ -1391,7 +1391,7 @@ async def on_message(message):
         try:
             ind=getstudentindex(usertomember(message.author).display_name)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         STUDENTS[ind].punkty=STUDENTS[ind].punkty-1
@@ -1402,7 +1402,7 @@ async def on_message(message):
         plik.close()
         msg=(sekcja+"\n\n"+miejsce[random.randrange(len(miejsce))]+kto.secret).format(message)
         await message.author.send(msg)
-        msg="Zdobywasz minusa za karę za sekcję zwłok!\nSprawdź DM żeby sprawdzić przebieg sekcji".format(message)
+        msg="Zdobywasz minusa za karę za sekcję zwłok!\nSprawdź DM żeby sprawdzić przebieg sekcji"
         await message.channel.send(msg)
         msg=("Uczeń "+STUDENTS[ind].name+" dokonał sekcji zwłok").format(message)
         nauczyciele=client.get_channel(585840021224030211)
@@ -1413,15 +1413,15 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<3:
-            msg="Brak odpowiedniej ilości danych".format(message)
+            msg="Brak odpowiedniej ilości danych"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         kto=word(mes,2)
@@ -1430,7 +1430,7 @@ async def on_message(message):
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Nie znaleziono takiego ucznia".format(message)
+            msg="Nie znaleziono takiego ucznia"
             await message.channel.send(msg)
             return
         tempstr=""
@@ -1453,15 +1453,15 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<3:
-            msg="Brak odpowiedniej ilości danych".format(message)
+            msg="Brak odpowiedniej ilości danych"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         kto=word(mes,2)
@@ -1470,7 +1470,7 @@ async def on_message(message):
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Nie znaleziono takiego ucznia".format(message)
+            msg="Nie znaleziono takiego ucznia"
             await message.channel.send(msg)
             return
         tempstr=""
@@ -1491,15 +1491,15 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<3:
-            msg="Brak odpowiedniej ilości danych".format(message)
+            msg="Brak odpowiedniej ilości danych"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         kto=word(mes,2)
@@ -1508,7 +1508,7 @@ async def on_message(message):
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Nie znaleziono takiego ucznia".format(message)
+            msg="Nie znaleziono takiego ucznia"
             await message.channel.send(msg)
             return
         przedmioty=stringtolist(STUDENTS[ind].items,True)
@@ -1519,7 +1519,7 @@ async def on_message(message):
             try:
                 przedmioty.remove(tresc.lower())
             except ValueError:
-                msg="Nie znaleziono podanego przedmiotu w bazie danych".format(message)
+                msg="Nie znaleziono podanego przedmiotu w bazie danych"
                 await message.channel.send(msg)
                 return
             if len(przedmioty)==0:
@@ -1548,15 +1548,15 @@ async def on_message(message):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<4:
-            msg="Brak odpowiedniej ilości danych".format(message)
+            msg="Brak odpowiedniej ilości danych"
             await message.channel.send(msg)
             return
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         co=word(mes,2)
@@ -1566,7 +1566,7 @@ async def on_message(message):
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Nie znaleziono takiego ucznia".format(message)
+            msg="Nie znaleziono takiego ucznia"
             await message.channel.send(msg)
             return
         if co.lower()=="zdolność":
@@ -1647,16 +1647,16 @@ async def on_message(message):
                     STUDENTS[ind].name=STUDENTS[ind].surn
                     STUDENTS[ind].surn=temp
                 STUDENTS[ind].invert=True
-                msg="Zrozumiałem! Od dzisiaj będziemy mówić uczniowi "+STUDENTS[ind].name+" po nazwisku!".format(message)
+                msg="Zrozumiałem! Od dzisiaj będziemy mówić uczniowi "+STUDENTS[ind].name+" po nazwisku!"
             elif tresc.lower()=="nie" or tresc.lower()=="false" or tresc.lower()=="no" or tresc.lower()=="0":
                 if STUDENTS[ind].invert:
                     temp=STUDENTS[ind].name
                     STUDENTS[ind].name=STUDENTS[ind].surn
                     STUDENTS[ind].surn=temp
                 STUDENTS[ind].invert=False
-                msg="Zrozumiałem! Od dzisiaj będziemy mówić uczniowi "+STUDENTS[ind].name+" po imieniu!".format(message)
+                msg="Zrozumiałem! Od dzisiaj będziemy mówić uczniowi "+STUDENTS[ind].name+" po imieniu!"
             else:
-                msg="Wybacz, nie zrozumiałem. Możesz powtórzyć?".format(message)
+                msg="Wybacz, nie zrozumiałem. Możesz powtórzyć?"
                 await message.channel.send(msg)
                 return
             await message.channel.send(msg)
@@ -1665,7 +1665,7 @@ async def on_message(message):
             saveall()
             return
             
-        msg="Nie rozpoznano typu wprowadzanych informacji".format(message)
+        msg="Nie rozpoznano typu wprowadzanych informacji"
         await message.channel.send(msg)
         return
 
@@ -1681,7 +1681,7 @@ async def on_message(message):
                 uczn=STUDENTS[i]
                 break
             if i+1==len(STUDENTS):
-                msg="Nie znaleziono podanego ucznia na liście uczniów. Spróbuj ponownie za kilka lat".format(message)
+                msg="Nie znaleziono podanego ucznia na liście uczniów. Spróbuj ponownie za kilka lat"
                 await message.channel.send(msg)
                 return
         ident=uczn.getembed(uczn.getmember().colour)
@@ -1695,11 +1695,11 @@ async def on_message(message):
         try:
             test=not jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if test:
-            msg="Nie możesz tego zrobić poproś anioła o update jeśli naprawdę tego potrzebujesz".format(message)
+            msg="Nie możesz tego zrobić poproś anioła o update jeśli naprawdę tego potrzebujesz"
             await message.channel.send(msg)
             return
         kto=None
@@ -1720,75 +1720,75 @@ async def on_message(message):
 
     if mes.lower().startswith("zagadka"):
         if wordsnumber(mes)<2:
-            msg="Poczekaj aż pierwsza zagadka się odblokuje".format(message)
+            msg="Poczekaj aż pierwsza zagadka się odblokuje"
             await message.channel.send(msg)
             return
         if word(mes,2)=="1":
-            msg="Poczekaj aż pierwsza zagadka się odblokuje".format(message)
+            msg="Poczekaj aż pierwsza zagadka się odblokuje"
             await message.channel.send(msg)
             return
         if word(mes,2)=="2":
-            msg="Poczekaj aż druga zagadka się odblokuje".format(message)
+            msg="Poczekaj aż druga zagadka się odblokuje"
             await message.channel.send(msg)
             return
         if word(mes,2)=="3":
-            msg="Poczekaj aż trzecia zagadka się odblokuje".format(message)
+            msg="Poczekaj aż trzecia zagadka się odblokuje"
             await message.channel.send(msg)
             return
-        msg="Nie rozpoznano numeru piętra".format(message)
+        msg="Nie rozpoznano numeru piętra"
         await message.channel.send(msg)
         return
 
     if mes.lower().startswith("hasło"):
         if wordsnumber(mes)<3:
             if word(mes,2).lower()=="alfa":
-                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na pierwszym piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności".format(message)
+                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na pierwszym piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności"
                 await message.channel.send(msg)
-                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do  sekretnego pokoju na pierwszym piętrze".format(message)
+                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do  sekretnego pokoju na pierwszym piętrze"
                 Monokuma=client.get_user(330392410964361217)
                 await Monokuma.send(msg)
                 return
             else:
-                msg="Błędne hasło. Tym razem się nie udało".format(message)
+                msg="Błędne hasło. Tym razem się nie udało"
                 await message.channel.send(msg)
                 return
         if word(mes,2)=="1":    
             if word(mes,3).lower()=="alfa":
-                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na pierwszym piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności".format(message)
+                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na pierwszym piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności"
                 await message.channel.send(msg)
-                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na pierwszym piętrze".format(message)
+                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na pierwszym piętrze"
                 Monokuma=client.get_user(330392410964361217)
                 await Monokuma.send(msg)
                 return
             else:
-                msg="Błędne hasło. Tym razem się nie udało".format(message)
+                msg="Błędne hasło. Tym razem się nie udało"
                 await message.channel.send(msg)
                 return
         if word(mes,2)=="2":    
             if word(mes,3).lower()=="omega":
-                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na drugim piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności".format(message)
+                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na drugim piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności"
                 await message.channel.send(msg)
-                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na drugim piętrze".format(message)
+                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na drugim piętrze"
                 Monokuma=client.get_user(330392410964361217)
                 await Monokuma.send(msg)
                 return
             else:
-                msg="Błędne hasło. Tym razem się nie udało".format(message)
+                msg="Błędne hasło. Tym razem się nie udało"
                 await message.channel.send(msg)
                 return
         if word(mes,2)=="3":    
             if word(mes,3).lower()=="gamma":
-                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na trzecim piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności".format(message)
+                msg="Udało ci się odgadnąć hasło do sekretnego pokoju na trzecim piętrze!\nZaraz powiem o tym dyrektorowi. On załatwi formalności"
                 await message.channel.send(msg)
-                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na trzecim piętrze".format(message)
+                msg="Uczeń "+usertomember(message.author).display_name+" odgadnął hasło do sekretnego pokoju na trzecim piętrze"
                 Monokuma=client.get_user(330392410964361217)
                 await Monokuma.send(msg)
                 return
             else:
-                msg="Błędne hasło. Tym razem się nie udało".format(message)
+                msg="Błędne hasło. Tym razem się nie udało"
                 await message.channel.send(msg)
                 return
-        msg="Błędny numer piętra".format(message)
+        msg="Błędny numer piętra"
         await message.channel.send(msg)
         return
 
@@ -1799,15 +1799,15 @@ async def on_message(message):
         try:
             kto=usertomember(message.author)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not (jestrola(kto,"Żywi") or jestrola(kto,SuperiorRole)):
-            msg="Tak bardzo tęsknisz za życiem złodzieja, że próbujesz nawet kraść zza grobu? Pathetic.".format(message)
+            msg="Tak bardzo tęsknisz za życiem złodzieja, że próbujesz nawet kraść zza grobu? Pathetic."
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<3:
-            msg="Za mało informacji. Co ja mam z tym kurwa zrobić?".format(message)
+            msg="Za mało informacji. Co ja mam z tym kurwa zrobić?"
             await message.channel.send(msg)
         test=jestrola(kto,SuperiorRole)
         today=date.today()
@@ -1831,7 +1831,7 @@ async def on_message(message):
         kto=kto.display_name
         number=is_in_list(kto,THIEVES)
         if number>1:
-            msg="Nie kradniesz troszkę za dużo? Mama nie mówiła, że pójdziesz za to do piekła?".format(message)
+            msg="Nie kradniesz troszkę za dużo? Mama nie mówiła, że pójdziesz za to do piekła?"
             await message.channel.send(msg)
             return
         ind=None
@@ -1839,13 +1839,13 @@ async def on_message(message):
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Dziwne, nie wydaje nam się, że kiedyś cię widzieliśmy".format(message)
+            msg="Dziwne, nie wydaje nam się, że kiedyś cię widzieliśmy"
             await message.channel.send(msg)
             return
         try:
             ind2=getstudentindex(word(mes,2))
         except NameError:
-            msg="Nie mogę znaleźć osoby którą chcesz okraść... Czy na pewno wszsystko z tobą w porządku?".format(message)
+            msg="Nie mogę znaleźć osoby którą chcesz okraść... Czy na pewno wszsystko z tobą w porządku?"
             await message.channel.send(msg)
             return
         if not test:
@@ -1923,19 +1923,19 @@ async def on_message(message):
         try:
             temp=usertomember(message.author).display_name
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         if not temp==kto:
             if not jestrola(usertomember(message.author),SuperiorRole):
-                msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+                msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
                 await message.channel.send(msg)
                 return
         ind=None
         try:
             ind=getstudentindex(kto)
         except NameError:
-            msg="Nie wydaje nam się, że znamy osobę o której mówisz. Możesz powtórzyć?".format(message)
+            msg="Nie wydaje nam się, że znamy osobę o której mówisz. Możesz powtórzyć?"
             await message.channel.send(msg)
             return
         lista=stringtolist(STUDENTS[ind].items,True)
@@ -1969,7 +1969,7 @@ async def on_message(message):
         try:
             temp=usertomember(message.author).display_name
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         Err=False
@@ -1999,9 +1999,9 @@ async def on_message(message):
         except NameError:
             msg=None
             if jestrola(memb,SuperiorRole):
-                msg="Nie wydaje nam się, że znamy osobę o której mówisz. Możesz powtórzyć?".format(message)
+                msg="Nie wydaje nam się, że znamy osobę o której mówisz. Możesz powtórzyć?"
             else:
-                msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+                msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         lista=stringtolist(STUDENTS[ind].items,True)
@@ -2034,12 +2034,12 @@ async def on_message(message):
         try:
             kto=usertomember(message.author)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         test=jestrola(kto,SuperiorRole)
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         msg="Resetowanie bota..."
@@ -2096,12 +2096,12 @@ async def on_message(message):
         try:
             kto=usertomember(message.author)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         test=jestrola(kto,SuperiorRole)
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<2:
@@ -2126,12 +2126,12 @@ async def on_message(message):
         try:
             kto=usertomember(message.author)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         test=jestrola(kto,SuperiorRole)
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         files=[]
@@ -2152,12 +2152,12 @@ async def on_message(message):
         try:
             kto=usertomember(message.author)
         except NameError:
-            msg="Ezekiel nigdy o tobie nie pomyślał...".format(message)
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
             await message.channel.send(msg)
             return
         test=jestrola(kto,SuperiorRole)
         if not test:
-            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?".format(message)
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
         if wordsnumber(mes)<2:

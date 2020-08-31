@@ -13,6 +13,7 @@ GAME=False
 KILLER=None
 TOKEN=None
 #Dane globalne
+bot_id=""
 PATH=""
 PATHFONT=""
 client=discord.Client()
@@ -496,6 +497,7 @@ async def on_message(message):
     global SuperiorRole
     global GAME
     global PATH
+    global bot_id
     if message.author==client.user:
         return
     if message.channel.type==discord.ChannelType.private:
@@ -2185,11 +2187,31 @@ async def on_message(message):
             msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
             await message.channel.send(msg)
             return
+        if wordsnumber(mes)>1:
+            if not word(mes,2).lower()==bot_id.lower():
+                return
         room=client.get_channel(735472342398009404)
         msg="Bot został wyłączony"
         await room.send(msg)
         print("Logged out at "+time.asctime())
         await client.logout()
+        return
+
+    if mes.lower().startswith("showlogged"):
+        try:
+            kto=usertomember(message.author)
+        except NameError:
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
+            await message.channel.send(msg)
+            return
+        test=jestrola(kto,SuperiorRole)
+        if not test:
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
+            await message.channel.send(msg)
+            return
+        msg="Aktualnie bot hostuje z id: "+bot_id
+        await message.channel.send(msg)
+        return
 
 @client.event
 async def on_ready():
@@ -2346,6 +2368,10 @@ async def on_ready():
 
 plik=open(PATH+"TOKEN.txt","r",encoding="utf-8")
 TOKEN=plik.read()
+plik.close()
+
+plik=open(PATH+"bot_id.txt","r",encoding="utf-8")
+bot_id=plik.read()
 plik.close()
 
 client.run(TOKEN)

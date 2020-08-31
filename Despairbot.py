@@ -1440,7 +1440,7 @@ async def on_message(message):
         if STUDENTS[ind].items=="":
             STUDENTS[ind].items=tempstr
         else:
-            STUDENTS[ind].s_items=STUDENTS[ind].items+", "+tempstr
+            STUDENTS[ind].items=STUDENTS[ind].items+", "+tempstr
         if GAME:
             STUDENTS[ind].message=await STUDENTS[ind].updateid()
         saveall()

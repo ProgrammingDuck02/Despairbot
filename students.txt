@@ -232,8 +232,13 @@ surn=Rate
 gender=Kobieta
 age=16
 appe=Dlugowlosa blondynka o dorodnych kształtach. Dość wysoka. 
+<<<<<<< HEAD
 items=puder, strzykawka, sznurki których używa jako bransoletek, łańcuch przy spódnicy. 
 s_items=puder, strzykawka, sznurki których używa jako bransoletek, łańcuch przy spódnicy. , długopis
+=======
+items=puder, strzykawka, sznurki których używa jako bransoletek, łańcuch przy spódnicy, kilka listków papieru toaletowego, zeszyt z zapiskami w nieznanym języku. W połowie jest pusty, długopis
+s_items=
+>>>>>>> cabbf97fb082d7d81de9b528937944b3438cbb97
 punkty=0
 ability=
 secret=

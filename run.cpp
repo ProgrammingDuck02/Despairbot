@@ -16,7 +16,7 @@ int main()
 	string path="cd "+get_current_dir();
 	system(path.c_str());
 	system("python despairbot.py");
-	printf("Bot stopped working\n");
+	printf("\nBot stopped working\n");
 	printf("Press any button to close runner");
 	getch();
 	return 0;

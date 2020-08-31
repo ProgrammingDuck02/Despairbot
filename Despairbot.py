@@ -2188,6 +2188,7 @@ async def on_message(message):
         room=client.get_channel(735472342398009404)
         msg="Bot został wyłączony"
         await room.send(msg)
+        print("Logged out at "+time.asctime())
         await client.logout()
 
 @client.event

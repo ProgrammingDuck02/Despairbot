@@ -887,7 +887,7 @@ async def on_message(message):
                 await message.channel.send(msg)
                 return
             for each in glob(PATH+"help/*.txt"):
-                plik=open(each,encoding="utf-8")
+                plik=open(each,"r",encoding="utf-8")
                 await message.channel.send(plik.read())
                 plik.close()
             return
@@ -897,7 +897,7 @@ async def on_message(message):
                 msg="błędna nazwa komendy"
                 await message.channel.send(msg)
                 return
-            plik=open(PATH+"help/"+komenda+".txt")
+            plik=open(PATH+"help/"+komenda+".txt","r",encoding="utf-8")
             await message.channel.send(plik.read())
             plik.close()
             return

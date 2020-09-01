@@ -34,7 +34,7 @@ image=https://cdn.discordapp.com/attachments/465950054176522244/7464324538451887
 identyfikator=747122110316412958
 message=747122017140211812
 invert=True
-additional=Jest fanatykiem królowej nauk. e^(i*pi)+1=0, Często krzyczy przez megafon oraz rzuca tekstami które tylko on sam rozumie.
+additional=Jest fanatykiem królowej nauk. e^(i*pi)+1=0, Często krzyczy przez megafon oraz rzuca tekstami które tylko on sam rozumie. Jest aseksualny
 
 id=541204178941509673
 name=Ezekiel
@@ -139,7 +139,7 @@ age=20
 appe=Rosły, szczupły o pociągłej twarzy, dość blady. Ubrany w przewiewne, lub przylegające do ciała ubrania, przeważnie w jasnych kolorach, lub czerni. Zielone oczy i niemal białe włosy towarzyszą częstemu uśmiechowi na twarzy.
 items=notatnik, rysownik, ołówek z nieskończoną ilością grafitu, szybkie okólary w wielu kolorach, biblioteczka ksiażek o technologi/nauce i WH40k, torba z różnorodnym sprzętem sportowym (który zmieści się w torbie), czapka komisarza imperium ludzkiego (WH40k), ciężki płaszcz, lodówka z rocznym zapasem mrożonej herbaty, zestaw małych kluczy/śrubokrętów.
 s_items=Szept - zaklęty pistolet
-punkty=1
+punkty=2
 ability=bonus do zabójstwa +20pp przy użyciu broni dystansowej po zażyciu herbaty. Dodatkowo kula/pocisk będzie niemożliwy do znalezienia. Jako debuff, po zażyciu herbaty (szczególnie w nocy), Dio ma duży problem zasnąć i może być nieprzytomny przez pół dnia następnego.
 secret=Dio był kiedyś łatwowiernym człowiekiem, który widział w każdym przyjaciela. |Niestety w końcu trafił się taki osobnik, który go wykorzystał co złamało psychikę Dio na pewien czas. Od teraz tworząc jakąkolwiek znajomość stoi za nim strach, który paraliżuje go na myśl, że ten ktoś może go wykorzystać przez co często ma za dużo negatywnych scenariuszy w głowie.
 dop=Dio

@@ -1,0 +1,14 @@
+ID;Przedmiot nr.1;Przedmiot nr.2;Przedmiot nr.3;Przedmiot nr.4;Przedmiot nr.5;Przedmiot nr.6;Przedmiot nr.7;Przedmiot nr.8;Przedmiot nr.9;Przedmiot nr.10;Przedmiot nr.11;Przedmiot nr.12;Przedmiot nr.13;Przedmiot nr.14;Przedmiot nr.15;
+370602661776588802;karty;tarot;trochę więcej kart;młot;pierścionki 
+330392410964361217;megafon
+541204178941509673;Anielski nóż;Zapałki
+387383734992633859;naszyjnik z kotkiem;urocze ubranka 
+294476268416532480;Talia kart;zapałki;karta z szyfrem 18;kalkulator
+261675004654125067;Zestaw ołówków;szkicownik;teczka na papiery;grafit w sztyfcie;gumka chlebowa;wiszer;fiksatywa.
+561628296379498496;dwie walizki;laptop
+194029589901737984;notatnik;rysownik;ołówek z nieskończoną ilością grafitu;szybkie okólary w wielu kolorach;biblioteczka ksiażek o technologi/nauce i WH40k;torba z różnorodnym sprzętem sportowym (który zmieści się w torbie);czapka komisarza imperium ludzkiego (WH40k);ciężki płaszcz;lodówka z rocznym zapasem mrożonej herbaty;zestaw małych kluczy/śrubokrętów.
+590925907942965249;agrafka;lsd;złoty zegarek;notatnik;zapalniczka;pistolet
+396768065272021003;pare kapselków w kieszeni
+361277399582638091;klej do tipsow;temperowka
+332290030620114944;Zapalniczka w kształcie misia;Dużo biżuterii typu naszyjniki lub pierścionki;Przez babcię jest uzależniony od kolczyków;naszyjników etc;Mniejsze okularki z różowymi szkłami. Ma tez podobne, ale mają inny kształt;Gumki do włosów;Często nosi czarne maseczki - czasami zakłada takie z misiem czy innymi obrazkami.
+663807472732995638;puder;strzykawka;sznurki których używa jako bransoletek;łańcuch przy spódnicy;kilka listków papieru toaletowego;zeszyt z zapiskami w nieznanym języku. W połowie jest pusty;długopis

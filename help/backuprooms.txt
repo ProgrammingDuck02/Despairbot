@@ -1,0 +1,1 @@
+d!backuprooms - Tworzy backup wszystkich pokoi i zapisuje je jako orginały. Komenda odwrotna do d!resetrooms. Komenda dostępna tylko dla Aniołów.

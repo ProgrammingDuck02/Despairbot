@@ -2149,6 +2149,30 @@ async def on_message(message):
         msg="Wszystkie pliki zostały odnowione!"
         await message.channel.send(msg)
     
+    if mes.lower().startswith("backuprooms"):
+        try:
+            kto=usertomember(message.author)
+        except NameError:
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
+            await message.channel.send(msg)
+            return
+        test=jestrola(kto,SuperiorRole)
+        if not test:
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
+            await message.channel.send(msg)
+            return
+        for each in glob(PATH+"rooms/*.txt"):
+            temps=os.path.abspath(each)
+            plik=open(temps,"r",encoding="utf-8")
+            text=plik.read()
+            plik.close()
+            temps=temps.replace("rooms","rooms - plain")
+            plik=open(temps,"w+",encoding="utf-8")
+            plik.write(text)
+            plik.close()
+        msg="Utworzono backup pokoi!"
+        await message.channel.send(msg)
+
     if mes.lower().startswith("legitymacja"):
         try:
             kto=usertomember(message.author)

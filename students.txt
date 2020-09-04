@@ -74,25 +74,6 @@ message=747122019291889664
 invert=False
 additional=
 
-id=294476268416532480
-name=Nicholas
-surn=Emmer
-gender=Mężczyzna
-age=22
-appe=włosy brąz, oczy błękit, postury chudej lekko atletycznej niewysoki, Koszula czerwień, kamizelka biała, czarny krawat, brązowy płaszcz z logiem skrzydła i napisem ASCJ
-items=Talia kart, zapałki, karta z szyfrem 18, kalkulator, maska gazowa
-s_items=
-punkty=0
-ability=Skradańsko: Dodatkowe +10pp do udanej kradzieży oraz +5pp do udanego morderstwa
-secret=Jest cyborgiem: od wewnątrz uda ma ogniwo które można wyjąć
-dop=Nicholasa
-vote=None
-image=https://cdn.discordapp.com/attachments/331521983470632961/747122825814343750/EbSaHicX0AAadsV.jpg
-identyfikator=747122157141622855
-message=747122020382277763
-invert=False
-additional=Zdał szkolenie CQC
-
 id=261675004654125067
 name=Shizune
 surn=Sunrise 

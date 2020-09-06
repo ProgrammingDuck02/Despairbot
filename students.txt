@@ -55,25 +55,6 @@ message=747122018012495943
 invert=False
 additional=Także no. Jest demonem. No i dyrektorem. I w sumie to po prostu chce patrzeć jak ziemia płonie. Jest tylko jedna osoba wobec której nie czuje chęci mordu...
 
-id=387383734992633859
-name=Milenka
-surn=Shirumi
-gender=dziewczynka
-age=15
-appe=bardzo szczupła, wysoka, jasne do ramion, szerokie ubranka
-items=naszyjnik z kotkiem, urocze ubranka 
-s_items=
-punkty=-2
-ability=Ma dodatkowe +15pp do udanego morderstwa
-secret=Milenka lubiła zwierzątka. Bardzo bardzo lubiła zwierzątka
-dop=Milenki
-vote=None
-image=https://media.discordapp.net/attachments/395902542216953858/746998849788182548/image0.jpg
-identyfikator=747122142134403213
-message=747122019291889664
-invert=False
-additional=
-
 id=261675004654125067
 name=Shizune
 surn=Sunrise 

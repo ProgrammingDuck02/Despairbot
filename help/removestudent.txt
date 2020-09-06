@@ -1,0 +1,1 @@
+d!removestudent (imię ucznia) - Usuwa ucznia z listy uczniów. Komenda dostępna tylko dla Aniołów.

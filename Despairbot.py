@@ -288,10 +288,12 @@ def getday(t_date):
 def nextcycle(t_date):
     month=int(t_date.strftime("%m"))
     day=int(t_date.strftime("%d"))
-    timest=31*(month-7)+day
-    day=int(timest/3)*3+3
-    if day>31:
-        day=day-31
+    if day%3==0:
+        day=day+3
+    else:
+        day=day+day%3
+    if day>30:
+        day=day-30
         month=month+1
     return date(2020,month,day)
 
@@ -1114,7 +1116,7 @@ async def on_message(message):
             return
         for i in range(len(STUDENTS)):
             STUDENTS[i].punkty=0
-            if GAME: STUDENTS[i].updateid
+            if GAME: STUDENTS[i].updateid()
         saveall()
         msg="Punkty wszystkich zostały zresetowane do 0"
         await message.channel.send(msg)
@@ -1488,7 +1490,7 @@ async def on_message(message):
         await message.channel.send(msg)
         return
 
-    if mes.lower().startswith("remove"):
+    if mes.lower().startswith("remove") and not mes.lower().startswith("removestudent"):
         try:
             test=jestrola(usertomember(message.author),SuperiorRole)
         except NameError:
@@ -1823,11 +1825,11 @@ async def on_message(message):
                     wiersze[i]="cycle="+CYCLE.strftime("%Y-%m-%d")
                     break
             plik.close()
-            plik.open(PATH+"settings.txt","w+",encoding="utf-8")
+            plik=open(PATH+"settings.txt","w+",encoding="utf-8")
             for i in range(len(wiersze)):
                 plik.write(wiersze[i]+"\n")
             plik.close()
-            plik.open(PATH+"thieves.txt","w+",encoding="utf-8")
+            plik=open(PATH+"thieves.txt","w+",encoding="utf-8")
             plik.close()
         kto=kto.display_name
         number=is_in_list(kto,THIEVES)
@@ -1964,7 +1966,7 @@ async def on_message(message):
             return
         else:
             msg="Nie wydaje mi się, że posiadasz taki przedmiot"
-            await message.channel.send(message)
+            await message.channel.send(msg)
             return
 
     if mes.lower().startswith("expose"):
@@ -2030,7 +2032,7 @@ async def on_message(message):
             return
         else:
             msg="Nie wydaje mi się, że posiadasz taki przedmiot"
-            await   message.channel.send(message)
+            await message.channel.send(msg)
             return
 
     if mes.lower().startswith("botreset"):
@@ -2236,6 +2238,52 @@ async def on_message(message):
         msg="Aktualnie bot hostuje z id: "+bot_id
         await message.channel.send(msg)
         return
+
+    if mes.lower().startswith("removestudent"):
+        try:
+            kto=usertomember(message.author)
+        except NameError:
+            msg="Ezekiel nigdy o tobie nie pomyślał..."
+            await message.channel.send(msg)
+            return
+        test=jestrola(kto,SuperiorRole)
+        if not test:
+            msg="Dlaczego chcesz używać mocy, która do ciebie nie należy?"
+            await message.channel.send(msg)
+            return
+        if wordsnumber(mes)<2:
+            msg="I co ja mam z tym kurwa zrobić?"
+            await message.channel.send(msg)
+            return
+        kto=word(mes,2).lower()
+        id=None
+        for each in STUDENTS:
+            if each.name.lower()==kto:
+                id=each.id
+                if not each.message==0:
+                    idroom=client.get_channel(618050482065375243)
+                    tempo=await idroom.fetch_message(each.message)
+                    await tempo.delete()
+                if not each.ident==0:
+                    idroom=client.get_channel(735681326463844363)
+                    tempo=await idroom.fetch_message(each.ident)
+                    await tempo.delete()
+                STUDENTS.remove(each)
+                Despair=client.get_guild(Despairid)
+                members=list(Despair.members)
+                for member in members:
+                    if member.id==id:
+                        lis=list(Despair.roles)
+                        for every in lis:
+                            if every.name=="Żywi" or every.name=="Żywi" or every.name=="Żywi" or every.name.startswith("Zwycięzcy"):
+                                await member.remove_roles(every)
+                msg="Pomyślnie usunięto ucznia "+word(mes,2)
+                await message.channel.send(msg)
+                saveall()
+                return
+        msg="Nie mogłem znaleźć ucznia. Jesteś pewny, że już go nie usunąłeś?"
+        await message.channel.send(msg)
+        return        
 
 @client.event
 async def on_ready():

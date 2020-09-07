@@ -968,11 +968,11 @@ async def on_message(message):
         murderchannel=client.get_channel(459343107868065793)
         try:
             lis=list(Despair.roles)
-            for i in range(len(lis)):
-                if lis[i].name=="Żywi":
-                    await kto.remove_roles(lis[i])
-                if lis[i].name=="Martwi":
-                    await kto.add_roles(lis[i])
+            for each in lis:
+                if each.name=="Żywi":
+                    await kto.remove_roles(each)
+                if each.name=="Martwi":
+                    await kto.add_roles(each)
         finally:
             if GAME:
                 for each in STUDENTS:
@@ -1305,6 +1305,10 @@ async def on_message(message):
 
     if mes.lower().startswith("randlist"):
         count=wordsnumber(mes)-1
+        if count<1:
+            msg="Za mało danych!"
+            await message.channel.send(msg)
+            return
         lista=[]
         for i in range(count):
             lista.append(word(mes,i+2))

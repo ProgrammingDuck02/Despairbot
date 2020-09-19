@@ -1,7 +1,7 @@
 votes=1
 Despair=334435715058499584
 superior=Anioł
-cycle=2020-09-13
+cycle=2020-09-20
 game=1
 
 

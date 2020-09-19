@@ -4,3 +4,6 @@ superior=Anioł
 cycle=2020-09-13
 game=1
 
+
+murdered=Bartosz
+killer=Shizune

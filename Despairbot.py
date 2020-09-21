@@ -934,6 +934,10 @@ async def on_message(message):
         return
 
     if mes.lower().startswith("kill") and not mes.lower().startswith("killer"):
+        if wordsnumber(mes)<2:
+            msg="Brak informacji kogo mam zabić... żałosne"
+            await message.channel.send(msg)
+            return
         test=None
         try:
             test=not jestrola(usertomember(message.author),SuperiorRole)
@@ -956,32 +960,39 @@ async def on_message(message):
             msg="To nie jest dusza, którą jesteśmy zainteresowani"
             await message.channel.send(msg)
             return
-        lista=['*Wyciąga pistolet i celuje w '+kto.mention+'*\nIt\'s showtime!\n*puf*\n**Uczeń '+kto.display_name+' został zabity**']
-        lista.append('*Wyciąga kręgosłup '+kto.mention+'*\n**Fatality!**\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*Podbiega do '+kto.mention+' i paca go w czoło*\nPuf! You\'re dead!\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*Podnosi mały paluszek '+kto.mention+'*\nMistrz Shifu nauczył mnie tej techniki\n*To, co dzieje się potem jest nie do opisania. Wiadomo tylko, że '+kto.display_name+' nie miał szans tego przeżyć*\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*Zajebistość tej sceny jest aż ponad skalę. Jeśli chcecie wiedzieć więcej, zapytajcie '+kto.mention+'*\nOmae wa mou shindeiru\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*'+kto.mention+' zauważa żabę na swojej drodze. Myśląc, że to zaczarowany książę lub księżniczka całuję ją\nŻaba nie zmienia się w człowieka\nŻaba była trująca\nNie ma miłości\nJest tylko śmierć*\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*'+kto.mention+' decyduje się pójść do jednego pokoju z Renem. Ren zamyka drzwi na klucz. Po kilku godzinach westchnień i jęków dochodzących z pokoju Ren wychodzi z uśmiechem. Na łóżku widać spocone,martwe (no i nagie) ciało '+kto.display_name+'*\n**Uczeń '+kto.display_name+' został zabity**')
-        lista.append('*Do '+kto.mention+' podbiega nastolatek z zeszytem i długopisem. Prosi o autograf. '+kto.mention+' po napisaniu swojego imienia i nazwiska pyta się dla kogo dedykacja. Nastolatek odpowiada:* Light Yagami. Masz 40 sekund\n**Po 40 sekundach uczeń '+kto.display_name+' został zabity**')
-        lista.append('*'+kto.mention+'postanawia poprogramować. Nagle wyskakuje bład z kompilacją. '+kto.display_name+'kładzie sobie kaczkę przy komputerze i zaczyna jej mówić na czym polega kod. Jednak to nie jest zwykła kaczka. To kaczka zagłady! Kiedy ty tłumaczysz jej program, ona pożera twoją duszę.*\n**Uczeń '+kto.display_name+' został zabity**')
-        murderchannel=client.get_channel(459343107868065793)
-        try:
-            lis=list(Despair.roles)
-            for each in lis:
-                if each.name=="Żywi":
-                    await kto.remove_roles(each)
-                if each.name=="Martwi":
-                    await kto.add_roles(each)
-        finally:
-            if GAME:
-                for each in STUDENTS:
-                    if each.id==kto.id:
-                        each.message=await each.updateid()
-                        break
-            mes=lista[random.randrange(len(lista))].format(message)
-            await murderchannel.send(mes)
+        ktos=None
+        test=False
+        for each in STUDENTS:
+            if STUDENTS.name.lower()==word(mes,2):
+                ktos=None
+                test=True
+                break
+        if not test:
+            msg="Nie mogę znaleźć podanej osoby w spisie uczniów"
+            await message.channel.send(msg)
             return
+        name=ktos.name
+        dop=ktos.dop
+        plik=open(PATH+"deaths.txt")
+        tem=plik.read()
+        lista=strtolist(tem)
+        murdermessage=lista[random.randrange(len(lista))]
+        murdermessage.replace("%name%",name)
+        murdermessage.replace("%dop%",dop)
+        murderchannel=client.get_channel(459343107868065793)
+        lis=list(Despair.roles)
+        for each in lis:
+            if each.name=="Żywi":
+                await kto.remove_roles(each)
+            if each.name=="Martwi":
+                await kto.add_roles(each)
+        if GAME:
+            for each in STUDENTS:
+                if each.id==kto.id:
+                    each.message=await each.updateid()
+                    break
+        await murderchannel.send(murdermessage)
+        return
 
     if mes.lower().startswith("save"):
         test=None

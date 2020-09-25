@@ -1,9 +1,8 @@
-votes=1
+votes=0
 Despair=334435715058499584
 superior=Anioł
-cycle=2020-09-20
+cycle=2020-09-26
 game=1
 
 
-murdered=Bartosz
 killer=Shizune

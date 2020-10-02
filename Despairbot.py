@@ -963,8 +963,8 @@ async def on_message(message):
         ktos=None
         test=False
         for each in STUDENTS:
-            if each.name.lower()==word(mes,2):
-                ktos=None
+            if each.name.lower()==word(mes,2).lower():
+                ktos=each
                 test=True
                 break
         if not test:
@@ -977,9 +977,10 @@ async def on_message(message):
         tem=plik.read()
         lista=strtolist(tem)
         murdermessage=lista[random.randrange(len(lista))]
-        murdermessage.replace("%name%",name)
-        murdermessage.replace("%dop%",dop)
+        murdermessage=murdermessage.replace("%name%",name)
+        murdermessage=murdermessage.replace("%dop%",dop)
         murderchannel=client.get_channel(459343107868065793)
+        Despair=client.get_guild(Despairid)
         lis=list(Despair.roles)
         for each in lis:
             if each.name=="Żywi":

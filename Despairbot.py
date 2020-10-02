@@ -963,7 +963,7 @@ async def on_message(message):
         ktos=None
         test=False
         for each in STUDENTS:
-            if STUDENTS.name.lower()==word(mes,2):
+            if each.name.lower()==word(mes,2):
                 ktos=None
                 test=True
                 break

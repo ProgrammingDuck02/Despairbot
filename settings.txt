@@ -5,4 +5,3 @@ cycle=2020-09-26
 game=1
 
 
-killer=Shizune
